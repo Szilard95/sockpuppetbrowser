@@ -1,4 +1,4 @@
-FROM zenika/alpine-chrome:119-with-playwright
+FROM zenika/alpine-chrome:with-playwright
 
 # docker build -t test .
 # docker run -it -v `pwd`:/tmp/server -i --init --cap-add=SYS_ADMIN test bash
