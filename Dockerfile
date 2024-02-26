@@ -5,10 +5,7 @@ FROM zenika/alpine-chrome:with-playwright
 
 USER root
 ENV PYTHONUNBUFFERED=1
-RUN apk add --update --no-cache python3 python3-dev musl-dev linux-headers && ln -sf python3 /usr/bin/python
-RUN python3 -m ensurepip
-RUN pip3 install --upgrade pip
-RUN pip3 install --no-cache --upgrade pip setuptools virtualenv
+RUN apk add --update --no-cache python3 py3-pip py3-virtualenv python3-dev musl-dev linux-headers && ln -sf python3 /usr/bin/python
 USER chrome
 
 #@todo Add some random collection of fonts and other stuff to blur the fingerprint a bit
